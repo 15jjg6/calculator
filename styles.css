@@ -1,0 +1,79 @@
+html, body {
+    margin: 0; 
+    padding: 0; 
+    font-family: sans-serif; 
+    background-color: black;
+}
+
+#calculator, .subgrid {
+    display: grid;
+}
+
+#calculator {
+    height: 720px;
+    width: 400px;
+    grid-template-areas: 
+        "total total total total"
+        "modif modif modif oper"
+        "digit digit digit oper"
+        "digit digit digit oper"
+        "digit digit digit oper"
+        "digit digit digit oper";
+    grid-auto-columns: 1fr;
+}
+
+h1 {
+    color: white; 
+    margin: 0; 
+    padding: 1rem; 
+    font-size: 5rem;
+
+    grid-area: total;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+button {
+    font-size: 40px;
+    border-radius: 200px;
+    border-color: transparent;
+    max-height: 80px;
+    margin: 2px;
+}
+
+.modifiers {
+    grid-area: modif;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+.modifiers button {
+    background-color: #ccc; 
+}
+
+.operations {
+    grid-area: oper;
+}
+.operations button {
+    background-color: orange; 
+    color: white;
+}
+
+.digits {
+    grid-area: digit;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.digits .wide {
+    flex: 2 0 60%;
+    order: 1;
+    text-align: left;
+    padding-left: 15px;
+}
+.digits button {
+    background-color: #606060; 
+    color: white;
+    flex: 1 0 30%;
+}
