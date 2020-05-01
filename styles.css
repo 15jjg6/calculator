@@ -10,8 +10,8 @@ html, body {
 }
 
 #calculator {
-    height: 720px;
-    width: 400px;
+    height: 700px;
+    width: 450px;
     grid-template-areas: 
         "total total total total"
         "modif modif modif oper"
@@ -39,8 +39,11 @@ button {
     font-size: 40px;
     border-radius: 200px;
     border-color: transparent;
-    max-height: 80px;
+    min-height: 100px;
+    max-height: 100px;
+    width: 100%;
     margin: 2px;
+    margin-right: 7px;
 }
 
 .modifiers {
@@ -70,7 +73,7 @@ button {
     flex: 2 0 60%;
     order: 1;
     text-align: left;
-    padding-left: 15px;
+    padding-left: 38px;
 }
 .digits button {
     background-color: #606060; 
